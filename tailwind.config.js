@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         mont: ["Montserrat", "sans-serif"],
         roboto: ["roboto", "sans-serif"],
+        dom: ["Domine", "serif"],
       },
       colors: {
         gray: "#8E8D8A",
