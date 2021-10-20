@@ -23,11 +23,21 @@ const Intro = () => {
       id="masterIntroContainer"
       className="max-w-7xl px-24 mx-auto h-almostScreen"
     >
-      <div className="h-1/2">
-        <h1>Seeker</h1>
+      <div id="titleCard" className="h-1/3 relative mb-32">
+        <h2 className="font-lobster text-white text-5xl absolute mt-4 ml-4">
+          Welcome to
+        </h2>
+        <h1 className="absolute w-full text-center text-white font-mont top-1/2 text-9xl transform -translate-y-1/2 ml-1">
+          SEEKER
+        </h1>
+        <div className="h-full flex">
+          <div className="w-1/3 bg-red-dark h-full rounded-l-lg"></div>
+          <div className="w-1/3 bg-black h-full"></div>
+          <div className="w-1/3 bg-gray h-full rounded-r-lg"></div>
+        </div>
       </div>
 
-      <div id="card" className="flex">
+      <div id="actionCard" className="flex">
         <section
           id="left"
           className="w-1/2 bg-tan-dark p-5 rounded-l-lg flex items-center flex-col justify-center"

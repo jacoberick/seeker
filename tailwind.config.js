@@ -7,6 +7,7 @@ module.exports = {
         mont: ["Montserrat", "sans-serif"],
         roboto: ["roboto", "sans-serif"],
         dom: ["Domine", "serif"],
+        lobster: ["Lobster", "cursive"],
       },
       colors: {
         gray: "#8E8D8A",
