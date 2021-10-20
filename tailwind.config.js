@@ -12,12 +12,15 @@ module.exports = {
         gray: "#8E8D8A",
         tan: {
           light: "#EAE7DC",
-          dark: "#D8C3A5",
+          dark: "#ad9c84",
         },
         red: {
           light: "#E98074",
           dark: "#E85A4F",
         },
+      },
+      height: {
+        almostScreen: "calc(100vh - 76px)",
       },
     },
   },
