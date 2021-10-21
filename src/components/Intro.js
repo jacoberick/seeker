@@ -31,7 +31,7 @@ const Intro = () => {
           SEEKER
         </h1>
         <div className="h-full flex">
-          <div className="w-1/3 bg-red-dark h-full rounded-l-lg"></div>
+          <div className="w-1/3 bg-tan-dark h-full rounded-l-lg"></div>
           <div className="w-1/3 bg-black h-full"></div>
           <div className="w-1/3 bg-gray h-full rounded-r-lg"></div>
         </div>
@@ -46,7 +46,7 @@ const Intro = () => {
             Search for NFTs using their contract address and token number.
           </p>
           <button className="mt-16 p-4 border-2 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-black border-black transition-colors">
-            <a href="#test">Get Started</a>
+            <a href="#seekMasterContainer">Get Started</a>
           </button>
         </section>
         <section id="right" className="w-1/2 rounded-r-lg bg-black">

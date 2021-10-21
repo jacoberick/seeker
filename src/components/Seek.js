@@ -15,7 +15,9 @@ axios
   });
 
 const Seek = () => {
-  return <div></div>;
+  return (
+    <div id="seekMasterContainer" className="h-almostScreen bg-tan-dark"></div>
+  );
 };
 
 export default Seek;

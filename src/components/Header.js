@@ -12,15 +12,23 @@ const Header = () => {
   );
 
   return (
-    <div id="masterHeaderContainer">
+    <div id="masterHeaderContainer" className="sticky top-0 z-10 bg-tan-light">
       <header className="flex justify-between py-5 px-24 max-w-7xl mx-auto">
         <p className="font-mont text-3xl">SKR</p>
         <nav className="flex items-center font-roboto text-sm mt-2">
-          <a onClick={updateActiveLink} href="#test" className="relative">
+          <a
+            onClick={updateActiveLink}
+            href="#masterIntroContainer"
+            className="relative"
+          >
             <p>INTRO</p>
             {active === "INTRO" ? activeSign : null}
           </a>
-          <a onClick={updateActiveLink} href="#test" className="ml-16 relative">
+          <a
+            onClick={updateActiveLink}
+            href="#seekMasterContainer"
+            className="ml-16 relative"
+          >
             <p>SEEK</p>
             {active === "SEEK" ? activeSign : null}
           </a>
