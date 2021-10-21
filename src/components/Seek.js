@@ -14,9 +14,15 @@ axios
     console.error(error);
   });
 
-const Seek = () => {
+const Seek = ({ setActive }) => {
   return (
-    <div id="seekMasterContainer" className="h-almostScreen bg-tan-dark"></div>
+    <div
+      id="seekMasterContainer"
+      className="h-almostScreen bg-tan-dark px-24"
+      onMouseEnter={() => setActive("SEEK")}
+    >
+      <p className="font-mont text-9xl text-white">SEEK</p>
+    </div>
   );
 };
 

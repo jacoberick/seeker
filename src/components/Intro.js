@@ -5,9 +5,10 @@ import doodle from "../imgs/doodle.png";
 import lorca from "../imgs/lorca.jpeg";
 import visitor from "../imgs/visitor.png";
 import snare from "../imgs/snare.png";
+import yuri from "../imgs/yuri-ill.jpg";
 
-const Intro = () => {
-  const imgArr = [doodle, lorca, visitor, snare];
+const Intro = ({ setActive }) => {
+  const imgArr = [doodle, lorca, visitor, snare, yuri];
   const [imageIndex, setImageIndex] = useState(0);
 
   //sets imageIndex every 1.5s to loop through photos
@@ -21,7 +22,8 @@ const Intro = () => {
   return (
     <div
       id="masterIntroContainer"
-      className="max-w-7xl px-24 mx-auto h-almostScreen"
+      className="max-w-7xl px-24 mx-auto h-almostScreen pt-8"
+      onMouseEnter={() => setActive("INTRO")}
     >
       <div id="titleCard" className="h-1/3 relative mb-32">
         <h2 className="font-lobster text-white text-5xl absolute mt-4 ml-4">
@@ -45,9 +47,11 @@ const Intro = () => {
           <p className="text-center text-4xl text-white font-mont">
             Search for NFTs using their contract address and token number.
           </p>
-          <button className="mt-16 p-4 border-2 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-black border-black transition-colors">
-            <a href="#seekMasterContainer">Get Started</a>
-          </button>
+          <a href="#seekMasterContainer">
+            <button className="mt-16 p-4 border-2 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-black border-black transition-colors">
+              Get Started
+            </button>
+          </a>
         </section>
         <section id="right" className="w-1/2 rounded-r-lg bg-black">
           <div id="imgContainer" className="">

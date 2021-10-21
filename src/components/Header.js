@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-const Header = () => {
-  const [active, setActive] = useState("INTRO");
-
+const Header = ({ active, setActive }) => {
   const updateActiveLink = (el) => {
     setActive(el.target.innerHTML);
   };
@@ -13,7 +11,7 @@ const Header = () => {
 
   return (
     <div id="masterHeaderContainer" className="sticky top-0 z-10 bg-tan-light">
-      <header className="flex justify-between py-5 px-24 max-w-7xl mx-auto">
+      <header className="flex justify-between px-24 py-5 max-w-7xl mx-auto">
         <p className="font-mont text-3xl">SKR</p>
         <nav className="flex items-center font-roboto text-sm mt-2">
           <a
