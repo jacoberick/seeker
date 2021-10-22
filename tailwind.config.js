@@ -23,6 +23,9 @@ module.exports = {
       height: {
         almostScreen: "calc(100vh - 76px)",
       },
+      outline: {
+        redDot: "2px solid #121212",
+      },
     },
   },
   variants: {

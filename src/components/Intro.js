@@ -7,6 +7,9 @@ import visitor from "../imgs/visitor.png";
 import snare from "../imgs/snare.png";
 import yuri from "../imgs/yuri-ill.jpg";
 
+const inputStyle = "rounded p-2 w-80 focus:outline-redDot";
+const labelStyle = "mb-2 font-dom block text-white";
+
 const Intro = ({ setActive }) => {
   const imgArr = [doodle, lorca, visitor, snare, yuri];
   const [imageIndex, setImageIndex] = useState(0);
@@ -40,18 +43,41 @@ const Intro = ({ setActive }) => {
       </div>
 
       <div id="actionCard" className="flex">
-        <section
-          id="left"
-          className="w-1/2 bg-tan-dark p-5 rounded-l-lg flex items-center flex-col justify-center"
-        >
-          <p className="text-center text-4xl text-white font-mont">
+        <section id="left" className="w-1/2 bg-tan-dark p-5 rounded-l-lg">
+          <p className="text-3xl text-white font-mont">
             Search for NFTs using their contract address and token number.
           </p>
-          <a href="#seekMasterContainer">
-            <button className="mt-16 p-4 border-2 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-black border-black transition-colors">
-              Get Started
-            </button>
-          </a>
+          <div className="flex flex-col items-center mt-2">
+            <div className="mt-8">
+              <label className={labelStyle} htmlFor="contract">
+                CONTRACT ADR
+              </label>
+              <input
+                className={inputStyle}
+                type="text"
+                id="contract"
+                name="contract"
+                placeholder="0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb"
+              />
+            </div>
+            <div className="mt-8">
+              <label className={labelStyle} htmlFor="token">
+                TOKEN NUM
+              </label>
+              <input
+                className={inputStyle}
+                type="text"
+                id="token"
+                name="token"
+                placeholder="1"
+              />
+            </div>
+            <a className="" href="#seekMasterContainer">
+              <button className="mt-16 p-2 border-2 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-black border-black transition-colors w-80">
+                Execute Seek
+              </button>
+            </a>
+          </div>
         </section>
         <section id="right" className="w-1/2 rounded-r-lg bg-black">
           <div id="imgContainer" className="">
