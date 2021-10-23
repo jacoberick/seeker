@@ -50,7 +50,7 @@ const Intro = ({ setActive }) => {
           <div className="flex flex-col items-center mt-2">
             <div className="mt-8">
               <label className={labelStyle} htmlFor="contract">
-                CONTRACT ADR
+                CONTRACT ADDRESS
               </label>
               <input
                 className={inputStyle}
@@ -62,7 +62,7 @@ const Intro = ({ setActive }) => {
             </div>
             <div className="mt-8">
               <label className={labelStyle} htmlFor="token">
-                TOKEN NUM
+                TOKEN NUMBER
               </label>
               <input
                 className={inputStyle}
