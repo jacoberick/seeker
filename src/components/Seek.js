@@ -35,6 +35,14 @@ const Seek = ({ setActive }) => {
         </div>
         <div id="info" className="w-2/5 p-5">
           <div>
+            <p className={labelClass}>TRANSACTION ADDRESS</p>
+            <p className="text-white">123456789</p>
+          </div>
+          <div className={infoDivClass}>
+            <p className={labelClass}>TOKEN ID</p>
+            <p className="text-white">5657489</p>
+          </div>
+          <div className={infoDivClass}>
             <p className={labelClass}>ARTIST</p>
             <p className="text-white">GULAG ANTHEM</p>
           </div>

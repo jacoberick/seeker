@@ -10,7 +10,7 @@ import yuri from "../imgs/yuri-ill.jpg";
 const inputStyle = "rounded p-2 w-80 focus:outline-redDot";
 const labelStyle = "mb-2 font-dom block text-white";
 
-const Intro = ({ setActive }) => {
+const Intro = ({ setActive, nft }) => {
   const imgArr = [doodle, lorca, visitor, snare, yuri];
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -47,12 +47,13 @@ const Intro = ({ setActive }) => {
           <p className="text-3xl text-white font-mont">
             Search for NFTs using their contract address and token number.
           </p>
-          <div className="flex flex-col items-center mt-2">
+          <form className="flex flex-col items-center mt-2">
             <div className="mt-8">
               <label className={labelStyle} htmlFor="contract">
                 CONTRACT ADDRESS
               </label>
               <input
+                required
                 className={inputStyle}
                 type="text"
                 id="contract"
@@ -65,6 +66,7 @@ const Intro = ({ setActive }) => {
                 TOKEN NUMBER
               </label>
               <input
+                required
                 className={inputStyle}
                 type="text"
                 id="token"
@@ -73,11 +75,14 @@ const Intro = ({ setActive }) => {
               />
             </div>
             <a className="" href="#seekMasterContainer">
-              <button className="mt-16 p-2 border-2 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-black border-black transition-colors w-80">
+              <button
+                type="submit"
+                className="mt-16 p-2 border-2 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-black border-black transition-colors w-80"
+              >
                 Execute Seek
               </button>
             </a>
-          </div>
+          </form>
         </section>
         <section id="right" className="w-1/2 rounded-r-lg bg-black">
           <div id="imgContainer" className="">
