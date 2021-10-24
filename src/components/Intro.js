@@ -10,7 +10,7 @@ import yuri from "../imgs/yuri-ill.jpg";
 const inputStyle = "rounded p-2 w-80 focus:outline-redDot";
 const labelStyle = "mb-2 font-dom block text-white";
 
-const Intro = ({ setActive, nft }) => {
+const Intro = ({ setActive, nft, setNft }) => {
   const imgArr = [doodle, lorca, visitor, snare, yuri];
   const [imageIndex, setImageIndex] = useState(0);
 
@@ -21,6 +21,11 @@ const Intro = ({ setActive, nft }) => {
       setImageIndex(newIndex);
     }, 2000);
   }, [imageIndex, imgArr.length]);
+
+  const setNftDetails = (e) => {
+    const value = e.target.value;
+    setNft({ ...nft, [e.target.name]: value });
+  };
 
   return (
     <div
@@ -53,6 +58,8 @@ const Intro = ({ setActive, nft }) => {
                 CONTRACT ADDRESS
               </label>
               <input
+                onChange={setNftDetails}
+                value={nft.contract}
                 required
                 className={inputStyle}
                 type="text"
@@ -66,6 +73,7 @@ const Intro = ({ setActive, nft }) => {
                 TOKEN NUMBER
               </label>
               <input
+                onChange={setNftDetails}
                 required
                 className={inputStyle}
                 type="text"

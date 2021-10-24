@@ -7,12 +7,15 @@ import Seek from "./components/Seek";
 
 function App() {
   const [active, setActive] = useState("INTRO");
-  const [nft, setNft] = useState({});
+  const [nft, setNft] = useState({
+    contract: "",
+    token: "",
+  });
 
   return (
     <div id="masterContainer" className="h-screen bg-tan-light">
       <Header active={active} setActive={setActive} />
-      <Intro nft={nft} setActive={setActive} />
+      <Intro nft={nft} setNft={setNft} setActive={setActive} />
       <Seek setActive={setActive} />
       <div id="test"></div>
     </div>
