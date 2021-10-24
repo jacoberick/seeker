@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import yuri from "../imgs/yuri-ill.jpg";
+import Footer from "./Footer";
 
 const infoDivClass = "text-white mt-8";
 const labelClass = "text-black";
@@ -33,10 +33,10 @@ const Seek = ({ setActive, apiURL }) => {
   return (
     <div
       id="seekMasterContainer"
-      className="h-almostScreen bg-tan-dark"
+      className="h-almostScreen bg-tan-dark relative"
       onMouseEnter={() => setActive("SEEK")}
     >
-      <div id="Inner" className="max-w-7xl mx-auto px-24">
+      <div className="max-w-7xl mx-auto px-24 ">
         <p className="font-mont text-9xl text-white text-center">SEEK RESULT</p>
         <hr className="text-white border-4 rounded-sm" />
       </div>
@@ -91,6 +91,7 @@ const Seek = ({ setActive, apiURL }) => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
