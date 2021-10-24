@@ -1,24 +1,35 @@
 import axios from "axios";
+import { useEffect, useState } from "react";
 import yuri from "../imgs/yuri-ill.jpg";
 
 const infoDivClass = "text-white mt-8";
 const labelClass = "text-black";
 
-const options = {
-  method: "GET",
-  url: "https://api.opensea.io/api/v1/asset/0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb/1/",
-};
+const Seek = ({ setActive, apiURL }) => {
+  const returnNada = () => null;
+  const [apiRes, setApiRes] = useState(false);
 
-axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+  useEffect(() => {
+    const hitUpAPI = () => {
+      const options = {
+        method: "GET",
+        url: apiURL,
+      };
 
-const Seek = ({ setActive }) => {
+      axios
+        .request(options)
+        .then(function (response) {
+          setApiRes(response.data);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    };
+    apiURL ? hitUpAPI() : returnNada();
+  }, [apiURL]);
+
+  console.log(apiRes);
+
   return (
     <div
       id="seekMasterContainer"
@@ -31,37 +42,52 @@ const Seek = ({ setActive }) => {
       </div>
       <section className="font-dom max-w-7xl mx-auto px-24 mt-16 flex items-end">
         <div className="w-3/5 mr-8" id="photo">
-          <img src={yuri} alt="" />
+          <img className="w-full" src={apiRes.image_url} alt="" />
         </div>
         <div id="info" className="w-2/5 p-5">
           <div>
             <p className={labelClass}>TRANSACTION ADDRESS</p>
-            <p className="text-white">123456789</p>
+            <p className="text-white">
+              {apiRes && apiRes.asset_contract.address
+                ? apiRes.asset_contract.address
+                : "Not Available"}
+            </p>
           </div>
           <div className={infoDivClass}>
             <p className={labelClass}>TOKEN ID</p>
-            <p className="text-white">5657489</p>
+            <p className="text-white">
+              {apiRes && apiRes.token_id ? apiRes.token_id : "Not Available"}
+            </p>
           </div>
           <div className={infoDivClass}>
             <p className={labelClass}>ARTIST</p>
-            <p className="text-white">GULAG ANTHEM</p>
+            <p className="text-white">
+              {apiRes && apiRes.asset_contract.name
+                ? apiRes.asset_contract.name
+                : "Not Available"}
+            </p>
           </div>
           <div className={infoDivClass}>
             <p className={labelClass}>TITLE</p>
-            <p className="text-4xl text-white">YURI SAYS HELLO WORLD</p>
+            <p className="text-4xl text-white">
+              {apiRes && apiRes.name ? apiRes.name : "Not Available"}
+            </p>
           </div>
           <div className={infoDivClass}>
             <p className={labelClass}>DESCRIPTION</p>
             <p className=" text-white">
-              Neon District is a free-to-play cyberpunk role-playing game.
-              Collect characters and gear, craft and level up teams, and battle
-              against other players through competitive multiplayer and in
-              turn-based combat.
+              {apiRes && apiRes.description
+                ? apiRes.description
+                : "Not Available"}
             </p>
           </div>
           <div className={infoDivClass}>
             <p className={labelClass}>OWNER ADDRESS</p>
-            <p className=" text-white">123454567987654345678</p>
+            <p className=" text-white">
+              {apiRes && apiRes.owner.address
+                ? apiRes.owner.address
+                : "Not Available"}
+            </p>
           </div>
         </div>
       </section>

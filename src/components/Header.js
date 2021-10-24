@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Header = ({ active, setActive }) => {
   const updateActiveLink = (el) => {
     setActive(el.target.innerHTML);

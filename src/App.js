@@ -11,12 +11,18 @@ function App() {
     contract: "",
     token: "",
   });
+  const [apiURL, setApiURL] = useState("");
 
   return (
     <div id="masterContainer" className="h-screen bg-tan-light">
       <Header active={active} setActive={setActive} />
-      <Intro nft={nft} setNft={setNft} setActive={setActive} />
-      <Seek setActive={setActive} />
+      <Intro
+        setApiURL={setApiURL}
+        nft={nft}
+        setNft={setNft}
+        setActive={setActive}
+      />
+      <Seek apiURL={apiURL} setActive={setActive} />
       <div id="test"></div>
     </div>
   );
