@@ -8,9 +8,9 @@ module.exports = {
         roboto: ["roboto", "sans-serif"],
         dom: ["Domine", "serif"],
         lobster: ["Lobster", "cursive"],
+        pow: ["Zen Kurenaido", "sans-serif"],
       },
       colors: {
-        gray: "#8E8D8A",
         tan: {
           light: "#EAE7DC",
           dark: "#ad9c84",
@@ -24,7 +24,7 @@ module.exports = {
         almostScreen: "calc(100vh - 76px)",
       },
       outline: {
-        redDot: "2px solid #121212",
+        redDot: "2px solid #374151",
       },
     },
   },

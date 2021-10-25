@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Footer from "./Footer";
 
 const infoDivClass = "text-white mt-8";
-const labelClass = "text-black";
+const labelClass = "text-black uppercase text-gray-800";
 
 const Seek = ({ setActive, apiURL }) => {
   const returnNada = () => null;
@@ -37,16 +37,18 @@ const Seek = ({ setActive, apiURL }) => {
       onMouseEnter={() => setActive("SEEK")}
     >
       <div className="max-w-7xl mx-auto px-24 ">
-        <p className="font-mont text-9xl text-white text-center">SEEK RESULT</p>
-        <hr className="text-white border-4 rounded-sm" />
+        <p className="font-mont text-9xl text-white text-center uppercase font-semibold">
+          seek result
+        </p>
+        <hr className=" border-4 rounded-sm" />
       </div>
-      <section className="font-dom max-w-7xl mx-auto px-24 mt-16 flex items-end">
+      <section className="font-dom max-w-7xl mx-auto px-24 mt-16 flex items-center">
         <div className="w-3/5 mr-8" id="photo">
           <img className="w-full" src={apiRes.image_url} alt="" />
         </div>
         <div id="info" className="w-2/5 p-5">
           <div>
-            <p className={labelClass}>TRANSACTION ADDRESS</p>
+            <p className={labelClass}>transaction address</p>
             <p className="text-white">
               {apiRes && apiRes.asset_contract.address
                 ? apiRes.asset_contract.address
@@ -54,27 +56,27 @@ const Seek = ({ setActive, apiURL }) => {
             </p>
           </div>
           <div className={infoDivClass}>
-            <p className={labelClass}>TOKEN ID</p>
+            <p className={labelClass}>token id</p>
             <p className="text-white">
               {apiRes && apiRes.token_id ? apiRes.token_id : "Not Available"}
             </p>
           </div>
           <div className={infoDivClass}>
-            <p className={labelClass}>ARTIST</p>
+            <p className={labelClass}>artist</p>
             <p className="text-white">
-              {apiRes && apiRes.asset_contract.name
-                ? apiRes.asset_contract.name
+              {apiRes && apiRes.creator.user
+                ? apiRes.creator.user.username
                 : "Not Available"}
             </p>
           </div>
           <div className={infoDivClass}>
-            <p className={labelClass}>TITLE</p>
+            <p className={labelClass}>title</p>
             <p className="text-4xl text-white">
               {apiRes && apiRes.name ? apiRes.name : "Not Available"}
             </p>
           </div>
           <div className={infoDivClass}>
-            <p className={labelClass}>DESCRIPTION</p>
+            <p className={labelClass}>description</p>
             <p className=" text-white">
               {apiRes && apiRes.description
                 ? apiRes.description
@@ -82,7 +84,7 @@ const Seek = ({ setActive, apiURL }) => {
             </p>
           </div>
           <div className={infoDivClass}>
-            <p className={labelClass}>OWNER ADDRESS</p>
+            <p className={labelClass}>owner address</p>
             <p className=" text-white">
               {apiRes && apiRes.owner.address
                 ? apiRes.owner.address
