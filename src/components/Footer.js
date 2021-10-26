@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const iconClass =
-  "text-2xl text-gray-800 hover:text-red-dark transition-all bSix:text-xl";
+  "text-2xl text-gray-800 hover:text-white transition-all bSix:text-xl";
 
 const Footer = () => {
   return (
