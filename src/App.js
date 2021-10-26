@@ -22,7 +22,7 @@ function App() {
         setNft={setNft}
         setActive={setActive}
       />
-      <Seek apiURL={apiURL} setActive={setActive} />
+      <Seek token={nft.token} apiURL={apiURL} setActive={setActive} />
       <div id="test"></div>
     </div>
   );

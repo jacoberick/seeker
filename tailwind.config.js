@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        bOne: { max: "1240px" },
+      },
       fontFamily: {
         mont: ["Montserrat", "sans-serif"],
         roboto: ["roboto", "sans-serif"],
@@ -29,7 +32,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+    },
   },
   plugins: [],
 };

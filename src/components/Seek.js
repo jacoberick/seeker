@@ -1,13 +1,29 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Footer from "./Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
 const infoDivClass = "text-white mt-8";
 const labelClass = "text-black uppercase text-gray-800";
 
-const Seek = ({ setActive, apiURL }) => {
+const Seek = ({ setActive, apiURL, token }) => {
   const returnNada = () => null;
   const [apiRes, setApiRes] = useState(false);
+  let apiToken =
+    token.length > 42 ? apiRes.token_id.substr(0, 42) + "..." : apiRes.token_id;
+
+  const copyCat = () => {
+    const button = document.getElementById("copyButton");
+    let value = document.getElementById("ownerAddy").innerText;
+    navigator.clipboard.writeText(value);
+    button.classList.remove("hover:bg-red-dark");
+    button.classList.add("bg-green-400");
+    setTimeout(() => {
+      button.classList.add("hover:bg-red-dark");
+      button.classList.remove("bg-green-400");
+    }, 1000);
+  };
 
   useEffect(() => {
     const hitUpAPI = () => {
@@ -63,9 +79,7 @@ const Seek = ({ setActive, apiURL }) => {
               <div className={infoDivClass}>
                 <p className={labelClass}>token id</p>
                 <p className="text-white">
-                  {apiRes && apiRes.token_id
-                    ? apiRes.token_id
-                    : "Not Available"}
+                  {apiRes && apiRes.token_id ? apiToken : "Not Available"}
                 </p>
               </div>
               <div className={infoDivClass}>
@@ -92,16 +106,25 @@ const Seek = ({ setActive, apiURL }) => {
               </div>
               <div className={infoDivClass}>
                 <p className={labelClass}>owner address</p>
-                <p className=" text-white">
-                  {apiRes && apiRes.owner.address
-                    ? apiRes.owner.address
-                    : "Not Available"}
-                </p>
+                <div className="flex items-center">
+                  <p id="ownerAddy" className=" text-white">
+                    {apiRes && apiRes.owner.address
+                      ? apiRes.owner.address
+                      : "Not Available"}
+                  </p>
+                  <button
+                    id="copyButton"
+                    onClick={copyCat}
+                    className="active:bg-green-400 ml-2 bg-gray-700 w-8 h-8 rounded-full hover:bg-red-dark transition"
+                  >
+                    <FontAwesomeIcon icon={faCopy} />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         ) : (
-          <p id="errorText" className="text-center mx-auto text-white">
+          <p id="errorText" className="text-center mx-auto text-white text-lg">
             Hey friend. You haven't run a Seek yet. Scroll back up to get
             started.
           </p>

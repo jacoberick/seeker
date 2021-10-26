@@ -61,7 +61,7 @@ const Intro = ({ setActive, nft, setNft, setApiURL }) => {
           id="left"
           className="w-1/2 bg-tan-dark p-10 rounded-l-lg flex flex-col"
         >
-          <p className="text-2xl text-white font-mont text-center">
+          <p className="text-2xl text-white font-mont text-center bOne:text-xl">
             Search for NFTs using their contract address and token number.
           </p>
           <form onSubmit={parseApiURL} className="my-auto">
