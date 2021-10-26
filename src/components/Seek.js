@@ -23,6 +23,9 @@ const Seek = ({ setActive, apiURL }) => {
         })
         .catch(function (error) {
           console.error(error);
+          setApiRes(false);
+          document.getElementById("errorText").innerHTML =
+            "Sorry, we couldn't find that NFT. Try again?";
         });
     };
     apiURL ? hitUpAPI() : returnNada();
@@ -42,7 +45,7 @@ const Seek = ({ setActive, apiURL }) => {
         </p>
         <hr className="text-white border-4 rounded-sm" />
       </div>
-      <section className="font-dom max-w-7xl mx-auto px-24 mt-16 ">
+      <section className="font-dom max-w-7xl mx-auto px-24 mt-16">
         {apiRes ? (
           <div className="flex items-center">
             <div className="w-3/5 mr-8" id="photo">
@@ -98,7 +101,7 @@ const Seek = ({ setActive, apiURL }) => {
             </div>
           </div>
         ) : (
-          <p className="text-center mx-auto text-white">
+          <p id="errorText" className="text-center mx-auto text-white">
             Hey friend. You haven't run a Seek yet. Scroll back up to get
             started.
           </p>
