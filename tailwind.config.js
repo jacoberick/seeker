@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      minHeight: {
+        seek: "50rem",
+      },
       padding: {
         header: "76px",
       },

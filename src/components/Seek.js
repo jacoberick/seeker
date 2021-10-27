@@ -52,16 +52,16 @@ const Seek = ({ setActive, apiURL, token }) => {
   return (
     <div
       id="seekMasterContainer"
-      className="h-screen bg-tan-dark relative pt-header"
+      className="bg-tan-dark relative pt-header"
       onMouseEnter={() => setActive("SEEK")}
     >
       <div className="max-w-7xl mx-auto px-24">
         <p className="font-mont text-9xl text-white text-center uppercase font-semibold">
           seek result
         </p>
-        <hr className="text-white border-4 rounded-sm" />
+        <hr className="texst-white border-4 rounded-sm" />
       </div>
-      <section className="font-dom max-w-7xl mx-auto px-24 mt-16">
+      <section className="font-dom max-w-7xl mx-auto px-24 my-24 min-h-seek">
         {apiRes ? (
           <div className="flex items-center">
             <div className="w-3/5 mr-8" id="photo">
@@ -124,7 +124,10 @@ const Seek = ({ setActive, apiURL, token }) => {
             </div>
           </div>
         ) : (
-          <p id="errorText" className="text-center mx-auto text-white text-lg">
+          <p
+            id="errorText"
+            className="text-center mx-auto text-white text-lg pt-10"
+          >
             Hey friend. You haven't run a Seek yet. Scroll back up to get
             started.
           </p>
