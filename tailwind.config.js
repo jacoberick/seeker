@@ -3,8 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      padding: {
+        header: "76px",
+      },
       screens: {
         bOne: { max: "1240px" },
+        bTwo: { max: "1076px" },
+        bThree: { max: "1024px" },
+        bFour: { max: "886px" },
       },
       fontFamily: {
         mont: ["Montserrat", "sans-serif"],
@@ -23,9 +29,7 @@ module.exports = {
           dark: "#E85A4F",
         },
       },
-      height: {
-        almostScreen: "calc(100vh - 76px)",
-      },
+      height: {},
       outline: {
         redDot: "2px solid #374151",
       },

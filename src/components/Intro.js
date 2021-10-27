@@ -8,7 +8,8 @@ import snare from "../imgs/snare.png";
 import yuri from "../imgs/yuri-ill.jpg";
 
 const inputStyle = "rounded p-2 w-full focus:outline-redDot";
-const labelStyle = "mb-2 font-dom block text-white uppercase";
+const labelStyle =
+  "mb-2 font-dom block text-white uppercase bOne:text-sm bThree:text-xs";
 
 const Intro = ({ setActive, nft, setNft, setApiURL }) => {
   const imgArr = [doodle, lorca, visitor, snare, yuri];
@@ -39,7 +40,7 @@ const Intro = ({ setActive, nft, setNft, setApiURL }) => {
   return (
     <div
       id="masterIntroContainer"
-      className="max-w-7xl px-24 mx-auto h-almostScreen pt-8"
+      className="max-w-7xl px-24 mx-auto h-screen bFour:h-full bg-tan-light pt-header pb-8"
       onMouseEnter={() => setActive("INTRO")}
     >
       <section id="titleCard" className="h-1/3 relative mb-32">
@@ -56,12 +57,12 @@ const Intro = ({ setActive, nft, setNft, setApiURL }) => {
         </div>
       </section>
 
-      <section id="actionCard" className="flex">
+      <section id="actionCard" className="flex bFour:block">
         <div
           id="left"
-          className="w-1/2 bg-tan-dark p-10 rounded-l-lg flex flex-col"
+          className="w-1/2 bg-tan-dark p-10 bTwo:p-7 rounded-l-lg flex flex-col"
         >
-          <p className="text-2xl text-white font-mont text-center bOne:text-xl">
+          <p className="text-2xl bOne:text-xl bThree:text-base text-white font-mont text-center ">
             Search for NFTs using their contract address and token number.
           </p>
           <form onSubmit={parseApiURL} className="my-auto">
@@ -97,7 +98,7 @@ const Intro = ({ setActive, nft, setNft, setApiURL }) => {
             </div>
             <button
               type="submit"
-              className="uppercase w-full p-3 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-gray-700 transition-colors"
+              className="uppercase w-full p-3 rounded-lg font-dom hover:bg-red-dark hover:border-red-dark text-white bg-gray-700 transition-colors bOne:text-sm bThree:text-xs"
             >
               Execute Seek
             </button>

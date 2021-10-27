@@ -52,10 +52,10 @@ const Seek = ({ setActive, apiURL, token }) => {
   return (
     <div
       id="seekMasterContainer"
-      className="h-almostScreen bg-tan-dark relative"
+      className="h-screen bg-tan-dark relative pt-header"
       onMouseEnter={() => setActive("SEEK")}
     >
-      <div className="max-w-7xl mx-auto px-24 ">
+      <div className="max-w-7xl mx-auto px-24">
         <p className="font-mont text-9xl text-white text-center uppercase font-semibold">
           seek result
         </p>

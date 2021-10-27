@@ -8,7 +8,10 @@ const Header = ({ active, setActive }) => {
   );
 
   return (
-    <div id="masterHeaderContainer" className="sticky top-0 z-10 bg-tan-light">
+    <div
+      id="masterHeaderContainer"
+      className="fixed w-full top-0 z-10 bg-tan-light"
+    >
       <header className="flex justify-between px-24 py-5 max-w-7xl mx-auto text-gray-700">
         <p className="font-mont text-3xl uppercase font-semibold">skr</p>
         <nav className="flex items-center font-roboto text-sm mt-2">
