@@ -41,7 +41,7 @@ const Intro = ({ setActive, nft, setNft, setApiURL }) => {
   return (
     <div
       id="masterIntroContainer"
-      className="max-w-7xl px-24 pt-header pb-40 bg-tan-light mx-auto bFour:px-12 w-full bEight:px-6"
+      className="max-w-7xl px-24 pt-header mb-40 bg-tan-light mx-auto bFour:px-12 w-full bEight:px-6"
       onMouseEnter={() => setActive("INTRO")}
     >
       <div id="introInner" className="">
