@@ -18,6 +18,8 @@ Seeker retrieves an NFT asset using the NFTs contract address and token number. 
   - Contract Address: 0x4cd0ea8b1bDb5ab9249d96cCF3d8A0d3aDa2Bc76
   - Token ID: 10651
 
+Happy Seeking!
+
 ## Available Scripts
 
 In the project directory, you can run:
