@@ -12,9 +12,11 @@ const Header = ({ active, setActive }) => {
       id="masterHeaderContainer"
       className="fixed w-full top-0 z-10 bg-tan-light"
     >
-      <header className="flex justify-between px-24 py-5 max-w-7xl mx-auto text-gray-700">
-        <p className="font-mont text-3xl uppercase font-semibold">skr</p>
-        <nav className="flex items-center font-roboto text-sm mt-2">
+      <header className="flex justify-between px-24 py-5 max-w-7xl mx-auto text-gray-700 bFour:px-12 bEight:px-6">
+        <p className="font-mont text-3xl uppercase font-semibold bSix:text-2xl">
+          skr
+        </p>
+        <nav className="flex items-center font-roboto text-sm bSix:text-xs">
           <a
             onClick={updateActiveLink}
             href="#masterIntroContainer"

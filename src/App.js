@@ -14,7 +14,7 @@ function App() {
   const [apiURL, setApiURL] = useState("");
 
   return (
-    <div id="masterContainer" className="h-screen bg-tan-light">
+    <div id="masterContainer" className=" bg-tan-light">
       <Header active={active} setActive={setActive} />
       <Intro
         setApiURL={setApiURL}

@@ -14,6 +14,11 @@ module.exports = {
         bTwo: { max: "1076px" },
         bThree: { max: "1024px" },
         bFour: { max: "886px" },
+        bFive: { max: "700px" },
+        bSix: { max: "600px" },
+        bSeven: { max: "500px" },
+        bEight: { max: "450px" },
+        bNine: { max: "375px" },
       },
       fontFamily: {
         mont: ["Montserrat", "sans-serif"],

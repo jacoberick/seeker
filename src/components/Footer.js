@@ -6,12 +6,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const iconClass =
-  "text-2xl text-gray-800 hover:text-white transition-all bSix:text-xl";
+  "text-2xl text-gray-800 hover:text-white transition-all bSix:text-xl bSix:text-xl";
 
 const Footer = () => {
   return (
-    <footer className="absolute bottom-0 w-full flex justify-between items-center px-24 py-5 max-w-7xl left-0 right-0 mx-auto">
-      <div>
+    <footer className="absolute bottom-0 w-full flex justify-between items-center px-24 py-5 max-w-7xl left-0 right-0 mx-auto bFour:px-12 bSeven:flex-col">
+      <div className="bSeven:mb-4">
         <a
           rel="noreferrer"
           target="_blank"
@@ -38,11 +38,17 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex items-center">
-        <p className="mr-4 font-pow text-xl text-gray-700">powered by</p>
-        <a target="_blank" rel="noreferrer" href="https://docs.opensea.io/">
+        <p className="mr-4 font-pow text-xl text-gray-700 bFive:text-base">
+          powered by
+        </p>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://docs.opensea.io/"
+          className="w-36 bFive:w-24"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="35"
             viewBox="0 0 437 100"
             fill="none"
           >
