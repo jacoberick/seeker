@@ -1,6 +1,6 @@
 # Seeker
 
-Retrieve a specified NFTs (Non-Fungible-Token) data from the OpenSea API with Seeker!
+Retrieve a specified NFT (Non-Fungible-Token) asset from the OpenSea API with Seeker!
 
 ## **How to Use**
 
