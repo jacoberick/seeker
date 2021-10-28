@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/seeker/static/css/main.ec7518c2.chunk.css",
+    "main.js": "/seeker/static/js/main.9ee063bb.chunk.js",
+    "main.js.map": "/seeker/static/js/main.9ee063bb.chunk.js.map",
+    "runtime-main.js": "/seeker/static/js/runtime-main.da26fc63.js",
+    "runtime-main.js.map": "/seeker/static/js/runtime-main.da26fc63.js.map",
+    "static/js/2.746fadd2.chunk.js": "/seeker/static/js/2.746fadd2.chunk.js",
+    "static/js/2.746fadd2.chunk.js.map": "/seeker/static/js/2.746fadd2.chunk.js.map",
+    "static/js/3.dafa5b68.chunk.js": "/seeker/static/js/3.dafa5b68.chunk.js",
+    "static/js/3.dafa5b68.chunk.js.map": "/seeker/static/js/3.dafa5b68.chunk.js.map",
+    "index.html": "/seeker/index.html",
+    "static/css/main.ec7518c2.chunk.css.map": "/seeker/static/css/main.ec7518c2.chunk.css.map",
+    "static/js/2.746fadd2.chunk.js.LICENSE.txt": "/seeker/static/js/2.746fadd2.chunk.js.LICENSE.txt",
+    "static/media/Waiting_For_the_Train.b268fe2c.jpg": "/seeker/static/media/Waiting_For_the_Train.b268fe2c.jpg",
+    "static/media/doodle.afe9ef6a.png": "/seeker/static/media/doodle.afe9ef6a.png",
+    "static/media/lorca.925fe845.jpeg": "/seeker/static/media/lorca.925fe845.jpeg",
+    "static/media/snare.1688527d.png": "/seeker/static/media/snare.1688527d.png",
+    "static/media/visitor.cf572eb8.png": "/seeker/static/media/visitor.cf572eb8.png",
+    "static/media/yuri-ill.d8e8f5f9.jpg": "/seeker/static/media/yuri-ill.d8e8f5f9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da26fc63.js",
+    "static/js/2.746fadd2.chunk.js",
+    "static/css/main.ec7518c2.chunk.css",
+    "static/js/main.9ee063bb.chunk.js"
+  ]
+}
