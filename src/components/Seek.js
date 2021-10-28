@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Footer from "./Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,7 +10,9 @@ const Seek = ({ setActive, apiURL, token }) => {
   const returnNada = () => null;
   const [apiRes, setApiRes] = useState(false);
   let apiToken =
-    token.length > 42 ? apiRes.token_id.substr(0, 42) + "..." : apiRes.token_id;
+    token.length > 42 && apiRes.token_id
+      ? apiRes.token_id.substr(0, 42) + "..."
+      : apiRes.token_id;
 
   const copyCat = () => {
     const button = document.getElementById("copyButton");
@@ -59,15 +60,15 @@ const Seek = ({ setActive, apiURL, token }) => {
         <p className="font-mont text-9xl text-white text-center uppercase font-semibold bTwo:text-8xl bFive:text-7xl bSeven:text-6xl bNine:text-5xl">
           seek result
         </p>
-        <hr className="texst-white border-4 rounded-sm" />
+        <hr className="tex-white border-4 rounded-sm" />
       </div>
-      <section className="font-dom max-w-7xl mx-auto px-24 mt-24 min-h-seek bSeven:px-6">
+      <section className="font-dom max-w-7xl mx-auto px-24 bSeven:px-6">
         {apiRes ? (
           <div className="flex items-center">
-            <div className="w-3/5 mr-8" id="photo">
+            <div className="w-1/2 mr-8" id="photo">
               <img className="w-full" src={apiRes.image_url} alt="" />
             </div>
-            <div id="info" className="w-2/5 p-5">
+            <div id="info" className="w-1/2">
               <div>
                 <p className={labelClass}>transaction address</p>
                 <p className="text-white">
@@ -85,7 +86,7 @@ const Seek = ({ setActive, apiURL, token }) => {
               <div className={infoDivClass}>
                 <p className={labelClass}>artist</p>
                 <p className="text-white">
-                  {apiRes && apiRes.creator.user
+                  {apiRes && apiRes.creator.user && apiRes.creator.user.username
                     ? apiRes.creator.user.username
                     : "Not Available"}
                 </p>
@@ -115,9 +116,9 @@ const Seek = ({ setActive, apiURL, token }) => {
                   <button
                     id="copyButton"
                     onClick={copyCat}
-                    className="active:bg-green-400 ml-2 bg-gray-700 w-8 h-8 rounded-full hover:bg-red-dark transition"
+                    className="active:bg-green-400 ml-2 bg-gray-700 w-8 h-8 hover:bg-red-dark transition rounded-full"
                   >
-                    <FontAwesomeIcon icon={faCopy} />
+                    <FontAwesomeIcon className="" icon={faCopy} />
                   </button>
                 </div>
               </div>
@@ -133,7 +134,6 @@ const Seek = ({ setActive, apiURL, token }) => {
           </p>
         )}
       </section>
-      <Footer />
     </div>
   );
 };

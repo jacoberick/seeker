@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Intro from "./components/Intro";
 import Seek from "./components/Seek";
+import Footer from "./components/Footer";
 
 function App() {
   const [active, setActive] = useState("INTRO");
@@ -23,7 +24,7 @@ function App() {
         setActive={setActive}
       />
       <Seek token={nft.token} apiURL={apiURL} setActive={setActive} />
-      <div id="test"></div>
+      <Footer />
     </div>
   );
 }

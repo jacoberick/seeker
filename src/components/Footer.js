@@ -10,7 +10,7 @@ const iconClass =
 
 const Footer = () => {
   return (
-    <footer className="absolute bottom-0 w-full flex justify-between items-center px-24 py-5 max-w-7xl left-0 right-0 mx-auto bFour:px-12 bSeven:flex-col">
+    <footer className="flex justify-between items-center px-24 py-5 max-w-7xl mx-auto bFour:px-12 bSeven:flex-col">
       <div className="bSeven:mb-4">
         <a
           rel="noreferrer"
