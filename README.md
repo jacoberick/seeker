@@ -1,6 +1,22 @@
-# Getting Started with Create React App
+# Seeker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Retrieve a specified NFTs (Non-Fungible-Token) data from the OpenSea API with Seeker!
+
+## **How to Use**
+
+Seeker retrieves an NFT asset using the NFTs contract address and token number. This information can typically be located on a NFTs information page. Pre-selected addresses and token numbers will be listed below for ease of demonstration.
+
+### **Want a quick demo? Plug these into Seeker...**
+
+- Weird Whales 76
+  - Contract Address: 0x96Ed81c7F4406Eff359E27BfF6325DC3c9e042BD
+  - Token ID: 76
+- Doodle #7326
+  - Contract Address: 0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e
+  - Token ID: 7326
+- Boonji #10651
+  - Contract Address: 0x4cd0ea8b1bDb5ab9249d96cCF3d8A0d3aDa2Bc76
+  - Token ID: 10651
 
 ## Available Scripts
 
